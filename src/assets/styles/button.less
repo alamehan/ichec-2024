@@ -1,0 +1,38 @@
+.btn-gradient {
+  font-family: 'Archivo', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.75px;
+  color: theme('colors.white');
+  text-shadow: 0px 2px 8px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+
+  padding: 16px 21px;
+  align-items: flex-start;
+  border-radius: 99px;
+  border: 2px solid theme('colors.transparent');
+  background: linear-gradient(119deg, theme('colors.brand_yellow') 18.75%, theme('colors.brand_teal') 50%, theme('colors.brand_blue') 81.25%);
+  background-size: 300%;
+
+  animation: gradient_animation 7s linear infinite;
+  -webkit-animation: gradient_animation 7s linear infinite;
+}
+
+.btn-gradient:hover {
+  color: theme('colors.white');
+  border: 2px solid theme('colors.brand_blue');
+}
+
+@keyframes gradient_animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

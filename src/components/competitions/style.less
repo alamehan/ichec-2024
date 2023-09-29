@@ -1,0 +1,176 @@
+@import "../../assets/styles/main.less";
+
+@ImgBgHeroMobile2: "../../assets/images/img-bg-hero-2-mobile.png";
+@ImgBgHeroTabletPotrait2: "../../assets/images/img-bg-hero-2-tablet-potrait.png";
+@ImgBgHeroTabletLandscape2: "../../assets/images/img-bg-hero-2-tablet-landscape.png";
+@ImgBgHeroDesktop2: "../../assets/images/img-bg-hero-2-desktop.png";
+
+@ImgBgHighlightMobile: "../../assets/images/img-bg-highlight-mobile.png";
+@ImgBgHighlightTabletPotrait: "../../assets/images/img-bg-highlight-tablet-potrait.png";
+@ImgBgHighlightTabletLandscape: "../../assets/images/img-bg-highlight-tablet-landscape.png";
+@ImgBgHighlightDesktop: "../../assets/images/img-bg-highlight-desktop.png";
+
+@ImgBgCompEventMobile: "../../assets/images/img-bg-comp-event-mobile.png";
+@ImgBgCompEventTabletPotrait: "../../assets/images/img-bg-comp-event-tablet-potrait.png";
+@ImgBgCompEventTabletLandscape: "../../assets/images/img-bg-comp-event-tablet-landscape.png";
+@ImgBgCompEventDesktop: "../../assets/images/img-bg-comp-event-desktop.png";
+
+@ImgBgTestimonialsMobile: "../../assets/images/img-bg-testimonials-mobile.png";
+@ImgBgTestimonialsTabletPotrait: "../../assets/images/img-bg-testimonials-tablet-potrait.png";
+@ImgBgTestimonialsTabletLandscape: "../../assets/images/img-bg-testimonials-tablet-landscape.png";
+@ImgBgTestimonialsDesktop: "../../assets/images/img-bg-testimonials-desktop.png";
+
+@ImgDivRegisFlowMobile: "../../assets/images/img-div-registration-flow-mobile.png";
+@ImgDivRegisFlowDesktop: "../../assets/images/img-div-registration-flow-desktop.png";
+
+#page-competitions {
+  .row1 {
+    @media (min-width: 1px) {
+      background-color: white;
+      background-size: cover;
+      // background-size: 100% 100%; // -> Stretch
+      background-position: right 25% bottom 100%;
+      background-repeat: no-repeat;
+
+      background-image: url(@ImgBgHeroMobile2);
+    }
+
+    @media (min-width: 360px) {
+      background-image: url(@ImgBgHeroTabletPotrait2);
+    }
+
+    @media (min-width: 768px) {
+      background-position: right 0% bottom 100%;
+      background-image: url(@ImgBgHeroTabletLandscape2);
+    }
+
+    @media (min-width: 1024px) {
+      background-image: url(@ImgBgHeroDesktop2);
+    }
+
+    @media (min-width: 1280px) {
+      background-position: center;
+    }
+  }
+
+  .row3 {
+    .row3-col1 {
+      border-radius: 24px;
+
+      @media (min-width: 1px) {
+        background-color: white;
+        background-size: cover;
+        // background-size: 100% 100%; // -> Stretch
+        background-position: left 0% bottom 100%;
+        background-repeat: no-repeat;
+
+        background-image: url(@ImgBgHighlightMobile);
+      }
+
+      @media (min-width: 360px) {
+        background-image: url(@ImgBgHighlightTabletPotrait);
+      }
+
+      @media (min-width: 768px) {
+        background-position: right 0% bottom 100%;
+        background-image: url(@ImgBgHighlightTabletLandscape);
+      }
+
+      @media (min-width: 1024px) {
+        background-image: url(@ImgBgHighlightDesktop);
+      }
+
+      @media (min-width: 1280px) {
+        background-position: center;
+      }
+    }
+  }
+
+  .row5 {
+    @media (min-width: 1px) {
+      .image-regis-flow {
+        width: 100%;
+        height: 720px;
+
+        background-size: cover;
+        background-size: 100% 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        background-image: url(@ImgDivRegisFlowMobile);
+      }
+    }
+
+    @media (min-width: 360px) {
+      .image-regis-flow {
+        // Sama seperti di atas
+      }
+    }
+
+    @media (min-width: 768px) {
+      .image-regis-flow {
+        width: 100%;
+        height: 360px;
+        background-image: url(@ImgDivRegisFlowDesktop);
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .image-regis-flow {
+        height: 480px;
+      }
+    }
+  }
+
+  .row6 {
+    @media (min-width: 1px) {
+      background-color: white;
+      background-size: cover;
+      // background-size: 100% 100%; // -> Stretch
+      background-position: center;
+      background-repeat: no-repeat;
+
+      background-image: url(@ImgBgCompEventMobile);
+    }
+
+    @media (min-width: 768px) {
+      background-image: url(@ImgBgCompEventTabletPotrait);
+    }
+
+    @media (min-width: 1024px) {
+      background-image: url(@ImgBgCompEventTabletLandscape);
+    }
+
+    @media (min-width: 1280px) {
+      background-image: url(@ImgBgCompEventDesktop);
+    }
+  }
+
+  .row10 {
+    .box-here {
+      border-radius: 24px;
+
+      @media (min-width: 1px) {
+        background-color: white;
+        background-size: cover;
+        // background-size: 100% 100%; // -> Stretch
+        background-position: center;
+        background-repeat: no-repeat;
+
+        background-image: url(@ImgBgTestimonialsMobile);
+      }
+
+      @media (min-width: 360px) {
+        background-image: url(@ImgBgTestimonialsTabletPotrait);
+      }
+
+      @media (min-width: 768px) {
+        background-image: url(@ImgBgTestimonialsTabletLandscape);
+      }
+
+      @media (min-width: 1024px) {
+        background-image: url(@ImgBgTestimonialsDesktop);
+      }
+    }
+  }
+}

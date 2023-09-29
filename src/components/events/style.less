@@ -1,0 +1,69 @@
+@import "../../assets/styles/main.less";
+
+@ImgBgTestimonialsMobile: "../../assets/images/img-bg-testimonials-mobile.png";
+@ImgBgTestimonialsTabletPotrait: "../../assets/images/img-bg-testimonials-tablet-potrait.png";
+@ImgBgTestimonialsTabletLandscape: "../../assets/images/img-bg-testimonials-tablet-landscape.png";
+@ImgBgTestimonialsDesktop: "../../assets/images/img-bg-testimonials-desktop.png";
+
+#component-card-speaker-container {
+  .row1-col1 {
+    border-radius: 24px;
+
+    @media (min-width: 1px) {
+      background-color: white;
+      background-size: cover;
+      // background-size: 100% 100%; // -> Stretch
+      background-position: left 0% bottom 100%;
+      background-repeat: no-repeat;
+
+      background-image: url(@ImgBgTestimonialsMobile);
+    }
+
+    @media (min-width: 360px) {
+      background-image: url(@ImgBgTestimonialsTabletPotrait);
+    }
+
+    @media (min-width: 768px) {
+      background-position: right 0% bottom 100%;
+      background-image: url(@ImgBgTestimonialsTabletLandscape);
+    }
+
+    @media (min-width: 1024px) {
+      background-image: url(@ImgBgTestimonialsDesktop);
+    }
+
+    @media (min-width: 1280px) {
+      background-position: center;
+    }
+  }
+}
+
+#page-events-workshop {
+  .row5 {
+    .box-here {
+      border-radius: 24px;
+
+      @media (min-width: 1px) {
+        background-color: white;
+        background-size: cover;
+        // background-size: 100% 100%; // -> Stretch
+        background-position: center;
+        background-repeat: no-repeat;
+
+        background-image: url(@ImgBgTestimonialsMobile);
+      }
+
+      @media (min-width: 360px) {
+        background-image: url(@ImgBgTestimonialsTabletPotrait);
+      }
+
+      @media (min-width: 768px) {
+        background-image: url(@ImgBgTestimonialsTabletLandscape);
+      }
+
+      @media (min-width: 1024px) {
+        background-image: url(@ImgBgTestimonialsDesktop);
+      }
+    }
+  }
+}

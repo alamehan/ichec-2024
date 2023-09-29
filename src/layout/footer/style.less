@@ -1,0 +1,43 @@
+@import "../../assets/styles/main.less";
+
+
+@ImgBgFooterMobile: "../../assets/images/img-bg-footer-mobile.png";
+@ImgBgFooterTabletPotrait: "../../assets/images/img-bg-footer-tablet-potrait.png";
+@ImgBgFooterTabletLandscape: "../../assets/images/img-bg-footer-tablet-landscape.png";
+@ImgBgFooterDesktop: "../../assets/images/img-bg-footer-desktop.png";
+
+#footer {
+	.row1 {
+		@media (min-width: 1px) {
+			background-color: white;
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+
+			background-image: url(@ImgBgFooterMobile);
+		}
+
+		@media (min-width: 768px) {
+			background-image: url(@ImgBgFooterTabletPotrait);
+		}
+
+		@media (min-width: 1024px) {
+			background-image: url(@ImgBgFooterTabletLandscape);
+		}
+
+		@media (min-width: 1280px) {
+			background-image: url(@ImgBgFooterDesktop);
+		}
+
+		.list-here {
+			img {
+				transform: scale(1);
+				transition: all 150ms ease-in-out;
+			}
+
+			img:hover {
+				transform: scale(1.15);
+			}
+		}
+	}
+}

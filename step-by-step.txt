@@ -1,0 +1,160 @@
+============================================================================================================
+Step by step membangun proyek ICHEC 2024 by Raihan Allaam menggunakan Vite, React JS, Tailwind CSS dan AntD
+============================================================================================================
+Catatan: Agar tidak terjadi error yang tidak diinginkan, Anda dapat mengggunakan versi teknologi yang sama.
+============================================================================================================
+1. Install Node.js versi 18.16.0 (LTS)
+2. Buat folder "My Projects" lalu buka cmd di folder tersebut
+3. Install Vite
+   > npm create vite@4.4.5                         (Jika ingin yang terbaru: npm create vite@latest)
+     - Beri nama project : ichec-2024
+     - Pilih teknologi	 : React -> TypeScript + SWC
+   > cd ichec-2024
+   > npm install
+   > npm run dev                                   (Jika ingin expose: npm run dev -- --host) -> Pakai Network yang terakhir
+4. Install Packages
+   > npm install react-router-dom@6.15.0           (Jika ingin yang terbaru: npm install react-router-dom)
+   > npm install less@4.2.0                        (Jika ingin yang terbaru: npm install less) 
+   > npm install antd@5.9.0		                  (Jika ingin yang terbaru: npm install antd)
+5. Install Tailwind CSS
+   > npm install -D tailwindcss@3.3.3 postcss@8.4.29 autoprefixer@10.4.15     (Jika ingin yang terbaru: npm install -D tailwindcss postcss autoprefixer)
+   > npx tailwindcss init -p
+   > npm install -D prettier@3.0.3 prettier-plugin-tailwindcss@0.5.4          (Jika ingin yang terbaru: npm install -D prettier prettier-plugin-tailwindcss)
+   > clear
+6. Buka VS Code -> File -> Add Folder to Workspace... -> Pilih folder ichec-2024 -> Add
+7. Install VS Code Extension
+   - Prettier Code Formatter
+   - Tailwind CSS IntelliSense
+   - ES7 + React/Redux/React-Native Snippets       (Gunakan snippets "rafce" saat membuat component baru)                          
+8. Konfigurasi Prettier (di VS Code)
+   - Masuk menu Settings, lalu ketik "Prettier: Single Quote", unceklis Jsx Single Quote & Single Quote, agar memakai kutip dua (") bukan satu (').
+   - Masuk menu Settings, lalu ketik "Prettier: Print Width", isi dengan 999, agar saat Prettier merapikan code tidak buat baris baru, tetapi memanjang.
+   - Cara format dokumen: CTRL + SHIFT + P, lalu pilih Format Document with Prettier atau with TypeScript & JavaScript Language Features.
+9. Konfigurasi utama
+   - ⚠️ vite.config.ts                             (Di export tambahkan -> base: './', ) -> Agar saat di build/deploy tidak white blank page
+   - tailwind.config.js                            (Atur content, mode, dan theme -> main design system dan customization disini)
+10. Setup awal & urutan kerja
+   A. Buat folder "images" di src/assets/
+      -> Lalu copy-paste seluruh assets design disini
+      -> Buat file "index.tsx" sebagai assets container (wadah)
+   B. Buat folder "sounds" di src/assets/
+      -> Lalu copy-paste seluruh assets sounds disini
+      -> Buat file "index.tsx" sebagai assets container (wadah)
+   C. Buat folder "styles" di src/assets/
+      -> Lalu copy-paste general design system disini
+         -> color.less
+         -> type.less
+         -> effect.less
+         -> button.less
+         -> animation.less
+      -> Buat file "main.less" sebagai:
+         -> Container untuk seluruh general design system (Via @import)
+         -> General CSS Styling & CSS Reset untuk seluruh pages
+         -> Import juga Google Fonts url('...) disini
+         -> Import juga tailwind disini (@tailwind base; @tailwind components; @tailwind utilities;)
+      -> Buat file "general.tsx" untuk
+         -> Style-style Tailwind CSS yang berulang
+   D. Buat folder "themes" di src/assets/
+      -> Buat file "index.ts" untuk modifikasi tema general AntD
+   E. Buat folder "components" di src/
+      -> Buat folder untuk setiap page yang akan dibuat nantinya
+      -> Setiap folder page berisi file "index.tsx" dan "index.less"
+      -> Buat juga folder untuk setiap complex components
+   F. Buat folder "layouts" di src/
+      -> Buat file "index.tsx" sebagai layout utama website (Navbar, Content, and Footer)
+      -> Buat folder "navbar" yang berisi "Navbar.tsx" dan "style.less"
+      -> Buat folder "footer" yang berisi "Footer.tsx" dan "style.less"
+   G. Buka src/main.tsx
+      -> Hapus       import "./index.css";
+      -> Tambahkan   import { ConfigProvider } from "antd";
+      -> Tambahkan   import { theme } from "./assets/themes";
+      -> Tambahkan   import { BrowserRouter as RouterProvider } from "react-router-dom";
+      -> Tambahkan   import "./assets/styles/main.less";
+      -> Ubah:
+            <React.StrictMode>
+               <App />
+            </React.StrictMode>
+         
+         Menjadi:
+            <React.StrictMode>
+               <ConfigProvider theme={theme}>
+                  <RouterProvider>
+                     <App />
+                  </RouterProvider>
+               </ConfigProvider>
+            </React.StrictMode>
+      -> 
+   H. Buka src/App.tsx
+      -> Hapus semua isinya
+      -> Tambahkan   import { useEffect } from "react";
+      -> Tambahkan   import { Routes, Route, Navigate, useLocation } from "react-router-dom";
+      -> Tambahkan   import Layout from "./layout";
+      -> Tambahkan   import HomePage from "./components/home";
+      -> Tambahkan   import... semua components page yang dibuat
+      -> Tambahkan   fitur "Scroll to top beetween pages"
+      -> Atur App() kurang lebih seperti ini:
+          <Layout>
+            <Routes>
+               <Route path="*" element={<Navigate to="/" />} />
+               <Route path="/" element={<HomePage />} />
+               <Route path="/about" element={<AboutPage />} />
+               <Route path="/competitions/business-case" element={<BusinesCase />} />
+               ...
+               ...
+               ...
+            </Routes>
+         </Layout>
+   I. Hapus file berikut:
+      -> src/index.css
+      -> src/App.css
+   J. Sentuhan akhir
+      -> Copy paste favicon ke folder public/
+      -> Atur favicon dan judul website di "index.html" 
+      -> Di setiap component page yang dibuat pastikan telah menambahkan
+         -> import { ... } from "../../assets/images/index.tsx";
+         -> import { ... } from "../../assets/sounds/index.tsx";
+         -> import css from "../../assets/styles/general";
+         -> Styling untuk page tersebut   -> Misal: import "./index.less";
+         -> Semua library yang digunakan  -> Misal: import { Link } from 'react-router-dom';
+11. VS Code -> New Terminal -> chec-2024-with-ssr
+   > npm run dev                 Untuk run project                            (Jika ingin expose: npm run dev -- --host) -> Pakai Network yang terakhir
+   > npm run build               Untuk build project
+12. Selamat! Anda telah menyelesaikan project step-by-step.
+
+============================================================================================================
+PRO TIPS: Gunakan useful keyboard shortcuts dibawah ini untuk menggunakan fitur-fitur unggulan VS Code
+============================================================================================================
+1. CTRL + SHIFT + P                                     (Run plugin)
+2. CTRL + H                                             (Replace text)
+3. Pilih baris kode lalu ALT + PANAH BAWAH/ATAS         (Move line)
+4. Pilih baris kode lalu SHIFT + ALT + PANAH BAWAH      (Duplicate line)
+5. Pilih kode yang belum selesai lalu CTRL + SPACE      (Show suggest)
+6. Pilih baris kode lalu CTRL + L                       (Select all code in line)
+
+============================================================================================================
+PRO TIPS: Manfaatkan GPT-4 untuk membantu Anda sepanjang coding, building, debuging, gunakan prompts berikut
+============================================================================================================
+// Prompts //
+1. Perhatikan potongan kode berikut [copy paste code here], lakukan analisa/jelaskan baris per baris/temukan masalah/dst...
+2. Bagaimana cara membuat [something] yang responsive menggunakan React, TypeScript, dan Tailwind CSS? Buat dari awal, tanpa library.
+   > Revisi: [tulis catatan revisi dalam poin-poin]
+   > Masih terdapat masalah [tulis masalah disini]
+   > Tolong ighlight hanya pada bagian yang berubahnya saja, tidak perlu menuliskan seluruh code
+
+// Insight //
+1. Buat first prompts sederhana saja tetapi tujuannya mendetail, lalu kembangkan, tambahkan fitur dsb...
+   Jika meminta GPT-4 membuatkan code yang lengkap dalam 1 perintah prompts, hasilnya akan "dipaksakan".
+2. Kelebihan buat code dari awal menggunakan GPT-4 adalah kita bisa belajar baris per baris meminta GPT-4 menjelaskannya
+   juga punya kebebasan memodifikasi sesuai revisi, beda halnya dengan library yang biasanya susah dimodifikasi.
+
+============================================================================================================
+PRO TIPS: Useful Tools yang digunakan dalam proyek ini
+============================================================================================================
+
+1. Compress PNG File - https://tinypng.com/
+2. Sound Effect Library - https://artlist.io/
+   -> https://artlist.io/sfx/track/bleep-bloop---menu-selection-pop/102259
+   -> https://artlist.io/sfx/track/bright-ui---childish-click-/111686
+   -> https://artlist.io/sfx/track/cartoonish---boing-elastic-/66909
+3. Artlist Downloader - https://steptodown.com/artlist-downloader/
+4. Convert ACC to WAV - https://cloudconvert.com/aac-to-wav

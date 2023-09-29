@@ -1,0 +1,44 @@
+/* --------------------------------- Import --------------------------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;700;800;900&display=swap');
+
+@import "color.less";
+@import "type.less";
+@import "effect.less";
+@import "button.less";
+@import "animation.less";
+
+/* ------------------------------ Tailwind CSS ------------------------------ */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* --------------------------------- General -------------------------------- */
+
+:root {
+  font-family: 'Archivo', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  color: theme('colors.color_text_body');
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+}
+
+/* ---------------------------------- Other --------------------------------- */
