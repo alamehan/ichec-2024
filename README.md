@@ -57,10 +57,14 @@ Oleh: [Raihan Allaam](https://alamehan.github.io/) \| Minggu, 01 Oktober 2023
    git init
    git add README.md
    git commit -m "First Commit"
-   [OPTIONAL] git remote add origin ---Paste your remote link here---
+   [OPTIONAL] git config --global user.name "--Paste username disini--"
+   [OPTIONAL] git config --global user.email "--Paste email disini--"
+   [OPTIONAL] git remote add origin ---Paste remote link disini---
    [OPTIONAL] git push -u origin master
    clear
    ```
+
+   Terdapat masalah saat konfigurasi Git? Simak video berikut ini: [Tutorial oleh Raihan Allaam](https://www.youtube.com/watch?v=iw-AL6YHAn0&t)
 
 ### B. Konfigurasi
 
