@@ -139,8 +139,11 @@ npm run build              Untuk build proyek, siap di upload ke layanan hosting
 | [Tables Generator](https://www.tablesgenerator.com/) | Untuk membuat tabel di Markdown ```.md``` lebih mudah. |
 | [GetEmoji](https://getemoji.com/) | Copy dan Paste Emoji dengan mudah. |
 | [TinyPNG](https://tinypng.com/) | Mengurangi ukuran file ```.png``` Anda tanpa mengurangi kualitas. |
+| [Trimmy](https://app.trimmy.io/) | Menghapus space kosong dari sekeliling gambar ```.png``` secara otomatis. |
 | [Artlist](https://artlist.io/) | - Dapatkan aset berkualitas tinggi. Sound effect, dll.<br>- Downloader: [StepToDown](https://steptodown.com/artlist-downloader/) |
 | [CloudConvert](https://cloudconvert.com/aac-to-wav) | Ubah format file ```.acc``` ke ```.wav```. |
+
+Butuh lebih banyak alat berguna lainnya? Kunjungi [NiceList](https://alamehan.github.io/projects/nice-list-web/)
 
 ### C. Chat GPT
 
