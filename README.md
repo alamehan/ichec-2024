@@ -104,11 +104,11 @@ Buka menu Settings → Ketik **Editor: Default Formatter** → Pilih **Prettier:
 
 Sebagai catatan, di setiap component pages yang dibuat pastikan telah import
 ```
-import { ... } from "../../assets/images/index.tsx";
-import { ... } from "../../assets/sounds/index.tsx";
+import { ..., ..., ... } from "../../assets/images/index.tsx";
+import { ..., ..., ... } from "../../assets/sounds/index.tsx";
 import css from "../../assets/styles/general";
 import "./index.less";
-import ... (Import juga semua library yang digunakan oleh page)
+import ... (Import juga semua library & components yang digunakan oleh page)
 ```
 Dan langkah terakhir, jalankan perintah berikut di Terminal → New Terminal → Lalu pilih **ichec-2024**.
 
