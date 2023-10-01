@@ -125,10 +125,10 @@ npm run build              Untuk build proyek, siap di upload ke layanan hosting
 
 | Shorcut                        | Deskripsi                                                             |
 |--------------------------------|-----------------------------------------------------------------------|
-| CTRL + SHIFT + P               | Menampilkan command pallete dimana Anda dapat mencari sebuah aksi.    |
+| CTRL + SHIFT + P               | Menampilkan **command pallete** dimana Anda dapat mencari sebuah aksi.|
 | ALT + Panah Bawah/Atas         | Memindahkan baris kode yang dipilih ke bawah/atas.                    |
 | SHIFT + ALT + Panah Bawah/Atas | Duplikat baris kode yang dipilih ke bawah/atas.                       |
-| CTRL + Space                   | Menampilkan saran (suggestions) di baris kode yang aktif saat ini.    |
+| CTRL + Space                   | Menampilkan **suggestions** di baris kode yang aktif saat ini.        |
 | CTRL + H                       | Untuk menimpa sebuah text tertentu. Mendukung **Regular Expression**. |
 | CTRL + L                       | Memilih satu baris blok teks.                                         |
 
@@ -137,7 +137,7 @@ npm run build              Untuk build proyek, siap di upload ke layanan hosting
 | Tools | Deskripsi |
 |---|---|
 | [Tables Generator](https://www.tablesgenerator.com/) | Untuk membuat tabel di Markdown ```.md``` lebih mudah. |
-| [GetEmoji](https://getemoji.com/) | Copy dan Paste Emoji dengan mudah. |
+| [GetEmoji](https://getemoji.com/) | Copy dan paste Emoji dengan mudah. |
 | [TinyPNG](https://tinypng.com/) | Mengurangi ukuran file ```.png``` Anda tanpa mengurangi kualitas. |
 | [Trimmy](https://app.trimmy.io/) | Menghapus space kosong dari sekeliling gambar ```.png``` secara otomatis. |
 | [Artlist](https://artlist.io/) | - Dapatkan aset berkualitas tinggi. Sound effect, dll.<br>- Downloader: [StepToDown](https://steptodown.com/artlist-downloader/) |
