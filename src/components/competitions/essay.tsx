@@ -23,7 +23,7 @@ const essay = () => {
   function generateTargetDate(year: number, month: number, day: number, hour: number = 0): Date {
     return new Date(year, month - 1, day, hour);
   }
-  const targetDate = generateTargetDate(2023, 10, 28, 24); // <- Ubah disini
+  const targetDate = generateTargetDate(2023, 11, 13, 24); // <- Ubah disini
 
   // Play Sound Effect
   function playSoundPop() {
@@ -141,12 +141,10 @@ const essay = () => {
                   <Timeline
                     mode="alternate"
                     items={[
-                      { dot: <img src={IconDotTimeline}></img>, children: <TimelineData date="25-30 September 2023" desc="Early Bird Registration" /> },
-                      { dot: <img src={IconDotTimeline}></img>, children: <TimelineData date="01-28 October 2023" desc="Regular Registration" /> },
-                      { dot: <img src={IconDotTimeline}></img>, children: <TimelineData date="29 Oct - 04 Nov 2023" desc="Extended Registration" /> },
-                      { dot: <img src={IconDotTimeline}></img>, children: <TimelineData date="16 December 2023" desc="Full Paper Submission Due Date" /> },
-                      { dot: <img src={IconDotTimeline}></img>, children: <TimelineData date="19 January 2024" desc="Finalist Announcement" /> },
-                      { dot: <img src={IconDotTimeline}></img>, children: <TimelineData date="18 February 2023" desc="Final Presentation" /> },
+                      { dot: <img src={IconDotTimeline}></img>, children: <TimelineData date="13 November 2023" desc="Registration Deadline" /> },
+                      { dot: <img src={IconDotTimeline}></img>, children: <TimelineData date="16 November 2023" desc="Essay Submission Deadline" /> },
+                      { dot: <img src={IconDotTimeline}></img>, children: <TimelineData date="28 January 2024" desc="Finalist Announcement" /> },
+                      { dot: <img src={IconDotTimeline}></img>, children: <TimelineData date="17 February 2023" desc="Final Presentation" /> },
                     ]}
                   />
                 </div>

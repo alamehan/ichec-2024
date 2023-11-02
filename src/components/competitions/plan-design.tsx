@@ -23,7 +23,7 @@ const planDesign = () => {
   function generateTargetDate(year: number, month: number, day: number, hour: number = 0): Date {
     return new Date(year, month - 1, day, hour);
   }
-  const targetDate = generateTargetDate(2023, 10, 31, 24); // <- Ubah disini
+  const targetDate = generateTargetDate(2023, 11, 14, 24); // <- Ubah disini
 
   // Play Sound Effect
   function playSoundPop() {
@@ -141,12 +141,11 @@ const planDesign = () => {
                   <Timeline
                     mode="alternate"
                     items={[
-                      { dot: <img src={IconDotTimeline}></img>, children: <TimelineData date="25-30 September 2023" desc="Early Bird Registration" /> },
-                      { dot: <img src={IconDotTimeline}></img>, children: <TimelineData date="01-31 October 2023" desc="Regular Registration" /> },
-                      { dot: <img src={IconDotTimeline}></img>, children: <TimelineData date="01 November 2023" desc="Extended Abstract Submission" /> },
-                      { dot: <img src={IconDotTimeline}></img>, children: <TimelineData date="25 November 2023" desc="Announcement Selected Abstract" /> },
-                      { dot: <img src={IconDotTimeline}></img>, children: <TimelineData date="18 December 2023" desc="Full Paper Submission Due Date" /> },
-                      { dot: <img src={IconDotTimeline}></img>, children: <TimelineData date="20 January 2024" desc="Finalist Announcement" /> },
+                      { dot: <img src={IconDotTimeline}></img>, children: <TimelineData date="14 November 2023" desc="Extended Registration Deadline" /> },
+                      { dot: <img src={IconDotTimeline}></img>, children: <TimelineData date="15 November 2023" desc="Extended Abstract Submission Deadline" /> },
+                      { dot: <img src={IconDotTimeline}></img>, children: <TimelineData date="16 December 2023" desc="Announcement Selected Abstract" /> },
+                      { dot: <img src={IconDotTimeline}></img>, children: <TimelineData date="13 January 2024" desc="Full Paper Submission" /> },
+                      { dot: <img src={IconDotTimeline}></img>, children: <TimelineData date="31 January 2024" desc="Finalist Announcement" /> },
                       { dot: <img src={IconDotTimeline}></img>, children: <TimelineData date="17 February 2024" desc="Final Presentation" /> },
                     ]}
                   />

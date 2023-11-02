@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Image } from 'antd';
 // import { IconArrowScroll, Img3dHero, Img3dAbout, Img3dCompEvent, Box3dAbout, Box3dTheme, Box3dTestimonials, Box3dSponsors, Box3dPartners, LogoPlaceholderSponsor, OrnamentDashLine, ImgDivTotalPrize, ImgDivParticipantMap, ImgDivLogoBC, ImgDivLogoPD, ImgDivLogoES, ImgDivLogoPS, ImgDivLogoWS, ImgDivLogoGS, ImgDivLogoAN, ImgDivTestiBC, ImgDivTestiPD, ImgDivTestiES, ImgDivTestiPS } from "../../assets/images/index.tsx";
-import { IconArrowScroll, Img3dHero, Img3dAbout, Img3dCompEvent, Box3dAbout, Box3dTheme, Box3dTestimonials, OrnamentDashLine, ImgDivTotalPrize, ImgDivParticipantMap, ImgDivLogoBC, ImgDivLogoPD, ImgDivLogoES, ImgDivLogoPS, ImgDivLogoWS, ImgDivLogoGS, ImgDivLogoAN, ImgDivTestiBC, ImgDivTestiPD, ImgDivTestiES, ImgDivTestiPS } from "../../assets/images/index.tsx";
+import { IconArrowScroll, Img3dHero, Img3dAbout, Img3dCompEvent, Box3dAbout, Box3dTheme, Box3dTestimonials, Box3dSponsors, Box3dPartners, OrnamentDashLine, ImgDivTotalPrize, ImgDivParticipantMap, ImgDivLogoBC, ImgDivLogoPD, ImgDivLogoES, ImgDivLogoPS, ImgDivLogoWS, ImgDivLogoGS, ImgDivLogoAN, ImgDivTestiBC, ImgDivTestiPD, ImgDivTestiES, ImgDivTestiPS, LogoSpApril, LogoMpAicheItb, LogoMpAicheIts, LogoMpAichePemAkamigas, LogoMpAicheUi, LogoMpAicheUper, LogoMpIcheme, LogoMpLmItb, LogoMpPermitBeijing, LogoMpPpiIndia, LogoMpSpeUpnvy, LogoMpSreIts, LogoMpSrePolines, LogoMpSreUi, LogoMpSreUnivAirlangga, LogoMpSreUpnyv, LogoMpUpraItb, LogoMpWebinarNasional } from "../../assets/images/index.tsx";
 import { soundPop, soundClick } from "../../assets/sounds/index.tsx";
 // import Carousel from '../carousel/carousel-with-transition.tsx'; // ⚠️ Buka file dan baca catatannya ⚠️
 import Carousel from '../carousel/carousel-without-transition.tsx'; // ⚠️ Kalau mau aman pakai ini saja ⚠️
@@ -11,10 +11,10 @@ import "./index.less";
 const index = () => {
   // Image for Carousel
   const carouselItems = [
-    { image: ImgDivTestiBC, text_team: "Champion of Business Case", text_winner: "PUK ITB", text_quote: "With this opportunity, We had the experience of visiting the renewable potential in Indonesia. This knowledge profilerated when We did extensive research on IChEC. We wish the best for the whole committee and the subsequent team for the next IChEC event!" },
+    { image: ImgDivTestiBC, text_team: "Champion of Business Case", text_winner: "PUK", text_quote: "With this opportunity, We had the experience of visiting the renewable potential in Indonesia. This knowledge profilerated when We did extensive research on IChEC. We wish the best for the whole committee and the subsequent team for the next IChEC event!" },
     { image: ImgDivTestiPD, text_team: "Champion of Plant Design", text_winner: "Kleeluc LAKIK", text_quote: "IChEC 2023 is going well as a place to compete and meet various finalists in Indonesia. This opportunity is an extraordinary experience to be able to contribute and become a winner in a Plant Design competition. Apart from that, this competition also provides a platform to get feedback from judges who are experts in their fields, thus helping us to develop." },
-    { image: ImgDivTestiES, text_team: "Champion of Essay:", text_winner: "Agrifish", text_quote: "We felt our hearts pounding and our spirits burning throughout IChEC 2023 competition. This was the moment where all our hardwork and dedication was put to the test. However, with extraordinary teamwork, we were able to overcome every obstacle with confidence. Whether or not this competition is a success depends on the outcome, but we have learned so much from the process. We learned about teamwork, perseverance, creativity in solving problems, and of course, about the true meaning of competition. This experience will always remain in our memories and become the foundation for achieving greater achievements in the future." },
-    { image: ImgDivTestiPS, text_team: "Champion of Problem Solving", text_winner: "DEA ITB", text_quote: "IChEC 2023 has surely been an extraordinary journey! Reflecting on our remarkable experience throughout the competition, we are thrilled to share that the experience has been nothing short of transformative. The knowledge we gained in problem-solving has proven to be invaluable; from dissecting the challenge, exploring unconventional approaches, and sculpting solutions that resonate with the ever-evolving landscape of the industry. We also became better at working together as a team. Undoubtedly, IChEC has left an unforgettable mark of journey, so don't miss the chance to join!" },
+    { image: ImgDivTestiES, text_team: "Champion of Essay", text_winner: "Agrifish", text_quote: "We felt our hearts pounding and our spirits burning throughout IChEC 2023 competition. This was the moment where all our hardwork and dedication was put to the test. However, with extraordinary teamwork, we were able to overcome every obstacle with confidence. Whether or not this competition is a success depends on the outcome, but we have learned so much from the process. We learned about teamwork, perseverance, creativity in solving problems, and of course, about the true meaning of competition. This experience will always remain in our memories and become the foundation for achieving greater achievements in the future." },
+    { image: ImgDivTestiPS, text_team: "Champion of Problem Solving", text_winner: "DEA", text_quote: "IChEC 2023 has surely been an extraordinary journey! Reflecting on our remarkable experience throughout the competition, we are thrilled to share that the experience has been nothing short of transformative. The knowledge we gained in problem-solving has proven to be invaluable; from dissecting the challenge, exploring unconventional approaches, and sculpting solutions that resonate with the ever-evolving landscape of the industry. We also became better at working together as a team. Undoubtedly, IChEC has left an unforgettable mark of journey, so don't miss the chance to join!" },
   ];
 
   // Play Sound Effect
@@ -178,10 +178,10 @@ const index = () => {
 
         {/* ---------------------------------- ROW 8 --------------------------------- */}
 
-        {/* <div className={`row8 ${css.marginSectionMD} ${css.widthFull}`}>
+        <div className={`row8 ${css.marginSectionMD} ${css.widthFull}`}>
           <div className={`${css.maxWidth} ${css.verticalCenter} h-fit`}>
             <div className={`${css.contentContainer}`}>
-              <div className={`${css.layout2Column} ${css.verticalCenter} gap-6`}>
+              <div className={`${css.layout2Column} ${css.verticalTop} gap-6`}>
                 <div className={`row8-col1 ${css.widthFull} ${css.txtCenterToStart} ${css.marginMobileSM}`}>
                   <div className={`${css.iconAndTextLeft} mb-12`}>
                     <div className={`${css.imgCenterToCenter} ${css.iconAndTextLeftMargin} ${css.iconAndTextKeepIconSize}`}>
@@ -190,13 +190,13 @@ const index = () => {
                     <div className={`${css.txtHeadline1}`}>Sponsors</div>
                   </div>
                   <div className={`${css.logoListsLeft} list-here gap-4`}>
+                    <div><img src={LogoSpApril} alt="Logo Placeholder" onMouseOver={playSoundPop} onClick={playSoundClick} /></div>
+                    {/* <div><img src={LogoPlaceholderSponsor} alt="Logo Placeholder" onMouseOver={playSoundPop} onClick={playSoundClick} /></div>
                     <div><img src={LogoPlaceholderSponsor} alt="Logo Placeholder" onMouseOver={playSoundPop} onClick={playSoundClick} /></div>
                     <div><img src={LogoPlaceholderSponsor} alt="Logo Placeholder" onMouseOver={playSoundPop} onClick={playSoundClick} /></div>
                     <div><img src={LogoPlaceholderSponsor} alt="Logo Placeholder" onMouseOver={playSoundPop} onClick={playSoundClick} /></div>
                     <div><img src={LogoPlaceholderSponsor} alt="Logo Placeholder" onMouseOver={playSoundPop} onClick={playSoundClick} /></div>
-                    <div><img src={LogoPlaceholderSponsor} alt="Logo Placeholder" onMouseOver={playSoundPop} onClick={playSoundClick} /></div>
-                    <div><img src={LogoPlaceholderSponsor} alt="Logo Placeholder" onMouseOver={playSoundPop} onClick={playSoundClick} /></div>
-                    <div><img src={LogoPlaceholderSponsor} alt="Logo Placeholder" onMouseOver={playSoundPop} onClick={playSoundClick} /></div>
+                    <div><img src={LogoPlaceholderSponsor} alt="Logo Placeholder" onMouseOver={playSoundPop} onClick={playSoundClick} /></div> */}
                   </div>
                 </div>
                 <div className={`row8-col2 ${css.widthFull} ${css.txtCenterToEnd}`}>
@@ -207,19 +207,36 @@ const index = () => {
                     <div className={`${css.txtHeadline1}`}>Media Partners</div>
                   </div>
                   <div className={`${css.logoListsRight} list-here gap-4`}>
+                    <div><img src={LogoMpAicheItb} alt="Logo Placeholder" onMouseOver={playSoundPop} onClick={playSoundClick} /></div>
+                    <div><img src={LogoMpAicheIts} alt="Logo Placeholder" onMouseOver={playSoundPop} onClick={playSoundClick} /></div>
+                    <div><img src={LogoMpAichePemAkamigas} alt="Logo Placeholder" onMouseOver={playSoundPop} onClick={playSoundClick} /></div>
+                    <div><img src={LogoMpAicheUi} alt="Logo Placeholder" onMouseOver={playSoundPop} onClick={playSoundClick} /></div>
+                    <div><img src={LogoMpAicheUper} alt="Logo Placeholder" onMouseOver={playSoundPop} onClick={playSoundClick} /></div>
+                    <div><img src={LogoMpIcheme} alt="Logo Placeholder" onMouseOver={playSoundPop} onClick={playSoundClick} /></div>
+                    <div><img src={LogoMpLmItb} alt="Logo Placeholder" onMouseOver={playSoundPop} onClick={playSoundClick} /></div>
+                    <div><img src={LogoMpPermitBeijing} alt="Logo Placeholder" onMouseOver={playSoundPop} onClick={playSoundClick} /></div>
+                    <div><img src={LogoMpPpiIndia} alt="Logo Placeholder" onMouseOver={playSoundPop} onClick={playSoundClick} /></div>
+                    <div><img src={LogoMpSpeUpnvy} alt="Logo Placeholder" onMouseOver={playSoundPop} onClick={playSoundClick} /></div>
+                    <div><img src={LogoMpSreIts} alt="Logo Placeholder" onMouseOver={playSoundPop} onClick={playSoundClick} /></div>
+                    <div><img src={LogoMpSrePolines} alt="Logo Placeholder" onMouseOver={playSoundPop} onClick={playSoundClick} /></div>
+                    <div><img src={LogoMpSreUi} alt="Logo Placeholder" onMouseOver={playSoundPop} onClick={playSoundClick} /></div>
+                    <div><img src={LogoMpSreUnivAirlangga} alt="Logo Placeholder" onMouseOver={playSoundPop} onClick={playSoundClick} /></div>
+                    <div><img src={LogoMpSreUpnyv} alt="Logo Placeholder" onMouseOver={playSoundPop} onClick={playSoundClick} /></div>
+                    <div><img src={LogoMpUpraItb} alt="Logo Placeholder" onMouseOver={playSoundPop} onClick={playSoundClick} /></div>
+                    <div><img src={LogoMpWebinarNasional} alt="Logo Placeholder" onMouseOver={playSoundPop} onClick={playSoundClick} /></div>
+                    {/* <div><img src={LogoPlaceholderSponsor} alt="Logo Placeholder" onMouseOver={playSoundPop} onClick={playSoundClick} /></div>
                     <div><img src={LogoPlaceholderSponsor} alt="Logo Placeholder" onMouseOver={playSoundPop} onClick={playSoundClick} /></div>
                     <div><img src={LogoPlaceholderSponsor} alt="Logo Placeholder" onMouseOver={playSoundPop} onClick={playSoundClick} /></div>
                     <div><img src={LogoPlaceholderSponsor} alt="Logo Placeholder" onMouseOver={playSoundPop} onClick={playSoundClick} /></div>
                     <div><img src={LogoPlaceholderSponsor} alt="Logo Placeholder" onMouseOver={playSoundPop} onClick={playSoundClick} /></div>
                     <div><img src={LogoPlaceholderSponsor} alt="Logo Placeholder" onMouseOver={playSoundPop} onClick={playSoundClick} /></div>
-                    <div><img src={LogoPlaceholderSponsor} alt="Logo Placeholder" onMouseOver={playSoundPop} onClick={playSoundClick} /></div>
-                    <div><img src={LogoPlaceholderSponsor} alt="Logo Placeholder" onMouseOver={playSoundPop} onClick={playSoundClick} /></div>
+                    <div><img src={LogoPlaceholderSponsor} alt="Logo Placeholder" onMouseOver={playSoundPop} onClick={playSoundClick} /></div> */}
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div> */}
+        </div>
 
       </div>
     </>
