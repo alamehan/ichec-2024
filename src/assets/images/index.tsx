@@ -104,10 +104,18 @@ import ImgDivTestiBC from "./img-div-testimoni-bc.png"
 import ImgDivTestiPD from "./img-div-testimoni-pd.png"
 import ImgDivTestiES from "./img-div-testimoni-es.png"
 import ImgDivTestiPS from "./img-div-testimoni-ps.png"
+
 import ImgDivSpeakerValencia from "./img-div-speaker-valencia.png"
 import ImgDivSpeakerBagas from "./img-div-speaker-bagas.png"
 import ImgDivSpeakerLukman from "./img-div-speaker-lukman.png"
 import ImgDivSpeakerHenry from "./img-div-speaker-henry.png"
+
+import ImgDivGSeminarDadan from "./img-div-gseminar-dadan.png"
+import ImgDivGSeminarEniya from "./img-div-gseminar-eniya.png"
+import ImgDivGSeminarMaulana from "./img-div-gseminar-maulana.png"
+import ImgDivGSeminarEduward from "./img-div-gseminar-eduard.png"
+import ImgDivGSeminarEdi from "./img-div-gseminar-edi.png"
+import ImgDivGSeminarCSRasendra from "./img-div-gseminar-cs-rasendra.png"
 
 import ImgDivLogoBC from "./img-div-logo-bc.png"
 import ImgDivLogoPD from "./img-div-logo-pd.png"
@@ -256,6 +264,12 @@ export {
   ImgDivSpeakerBagas,
   ImgDivSpeakerLukman,
   ImgDivSpeakerHenry,
+  ImgDivGSeminarDadan,
+  ImgDivGSeminarEniya,
+  ImgDivGSeminarMaulana,
+  ImgDivGSeminarEduward,
+  ImgDivGSeminarEdi,
+  ImgDivGSeminarCSRasendra,
   ImgDivLogoBC,
   ImgDivLogoPD,
   ImgDivLogoES,

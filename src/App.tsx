@@ -8,7 +8,7 @@ import PlanDesign from "./components/competitions/plan-design"
 import Essay from "./components/competitions/essay"
 import ProblemSolving from "./components/competitions/problem-solving"
 import WorkShop from "./components/events/workshop"
-// import GrandSeminar from "./components/events/grand-seminar";
+import GrandSeminar from "./components/events/grand-seminar";
 // import AwardingNight from "./components/events/awarding-night";
 import Merchandise from "./components/merchandise"
 import Faqs from "./components/faqs"
@@ -35,7 +35,7 @@ function App() {
         <Route path="/essay" element={<Essay />} />
         <Route path="/problem-solving" element={<ProblemSolving />} />
         <Route path="/workshop" element={<WorkShop />} />
-        <Route path="/grand-seminar" element={<Upcoming />} />
+        <Route path="/grand-seminar" element={<GrandSeminar />} />
         <Route path="/awarding-night" element={<Upcoming />} />
         <Route path="/merchandise" element={<Merchandise />} />
         <Route path="/faq" element={<Faqs />} />

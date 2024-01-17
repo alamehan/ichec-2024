@@ -67,12 +67,12 @@ function ProductCardMulti(props: { image1: any; image2: any; name: any; price: a
 
 const index = () => {
   // Play Sound Effect
-  function playSoundPop() {
-    new Audio(soundPop).play()
-  }
-  function playSoundClick() {
-    new Audio(soundClick).play()
-  }
+  // function playSoundPop() {
+  //   new Audio(soundPop).play()
+  // }
+  // function playSoundClick() {
+  //   new Audio(soundClick).play()
+  // }
 
   return (
     <>

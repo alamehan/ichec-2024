@@ -106,10 +106,11 @@ const planDesign = () => {
                   <div className={`${css.imgCenterToCenter} mb-16`}>
                     <img src={Box3dTimeLeft} alt="Box 3D Time Left" className="animate-swing" />
                   </div>
-                  <div className={`${css.imgCenterToCenter} mb-12`}>
+                  <div className={`${css.imgCenterToCenter} mb-12 hidden`}>
                     <Countdown targetDate={targetDate} />
                   </div>
-                  <div className={`${css.txtHeadline1}`}>Until the registration deadline</div>
+                  <div className={`${css.txtHeadline1} hidden`}>Until the registration deadline</div>
+                  <div className={`${css.txtHeadline1}`}>Registration is closed</div>
                 </div>
               </div>
             </div>
