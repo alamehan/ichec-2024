@@ -106,7 +106,7 @@ const grandSeminar = () => {
         {/* ---------------------------------- ROW 6 --------------------------------- */}
 
         <SpeakerCardContainer link="#" linkClass="hidden" title="" subtitle="">
-          <SpeakerCard photo={ImgDivGSeminarCSRasendracl} theme="Moderator" name="🧔 Dr. Carolus Borromeus Rasrendra, S.T., M.T." position="💼 Lecturer and Researcher at Chemical Engineering ITB" description="" />
+          <SpeakerCard photo={ImgDivGSeminarCSRasendra} theme="Moderator" name="🧔 Dr. Carolus Borromeus Rasrendra, S.T., M.T." position="💼 Lecturer and Researcher at Chemical Engineering ITB" description="" />
         </SpeakerCardContainer>
 
         {/* ---------------------------------- ROW 7 --------------------------------- */}
